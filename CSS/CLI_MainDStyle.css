@@ -6,12 +6,40 @@ body {
 }
 
 header {
-    background-color:#9fd6d2;
+    background-color: #9fd6d2;
     padding: 20px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
+.header-info label {
+    font-size: 16px;
+    font-weight: bold;
+}
+.header-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.header-buttons button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #8b7a5e ;
+    font-size: large;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 .logo {
     width: 400px;
     height: 200px;
@@ -25,7 +53,16 @@ h1 {
 h2 {
     margin: 0;
 }
+.cart-info {
+    display: flex;
+    align-items: center;
+}
 
+.cart-info .cart-icon {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
 .content {
     padding: 20px;
     display: flex;
@@ -43,7 +80,7 @@ h2 {
 
 .tab-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 24px;
     background-color: #f2f2f2;
     border: none;
     border-bottom: 2px solid transparent;
@@ -66,7 +103,43 @@ h2 {
 .tab-content.active {
     display: block;
 }
+.carrito-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: #d0ecea;
+    padding: 20px;
+    margin-bottom: 20px;
+}
 
+.carrito-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.carrito-details label {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.carrito-buttons {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.carrito-buttons button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #8b7a5e;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ffffff;
+}
 .resultados {
     display: flex;
     overflow-x: auto;
@@ -77,34 +150,48 @@ h2 {
 .resultadosProductos {
     display: flex;
     overflow-y: auto;
-    max-width: 100%;
+    max-width: 100vw;
     background-color: #d0ecea;
+    margin: 10px;
 }
 .resultadosProductosCarrito {
     display: flex;
     overflow-y: auto;
     max-width: 100vw;
     background-color: #d0ecea;
+    margin: 10px;
+    
 }
-.resultadosProductosCarritoHistorial {
+.resultadosProductosHistorial{
     display: flex;
     overflow-y: auto;
     max-width: 100vw;
     background-color: #d0ecea;
+    margin: 10px;
+    
+}
+.tarjeta-contenedorProductosHistorial{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-grow: 1;
 }
 .tarjeta-contenedorProductos {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-grow: 1;
 }
 .tarjeta-contenedorProductosCarrito {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    flex-grow: 1;
 }
 .tarjeta-contenedor {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .tarjetaCategory {
@@ -115,6 +202,7 @@ h2 {
     margin: 10px;
     text-align: center;
     transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 .tarjetaCategory:hover {
@@ -122,14 +210,46 @@ h2 {
 }
 .tarjetaProduct{
     width: 40%;
+    max-width:100vw;
     padding: 20px;
     border-radius: 20px;
     background-color: #bec2c5;
     margin: 10px;
     text-align: left;
-    transition-duration: 0.5s;
+  
 }
-
-.tarjetaProduct:hover {
-    background-color: #4ea0cfd3;
+.tarjetaProductCar{
+    width: 40%;
+    max-width:100vw;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #bec2c5;
+    margin: 10px;
+    text-align: left;
+  
+}
+.tarjetaProductHistory{
+    width: 40%;
+    max-width:100vw;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #bec2c5;
+    margin: 10px;
+    text-align: left;
+  
+}
+.tarjetaProduct button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #8b7a5e;
+    font-size: large;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    color: #ffffff;
+}
+.tarjetaProduct button:hover{
+    background-color: #ffefd3 ;
 }
