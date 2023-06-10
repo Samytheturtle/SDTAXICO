@@ -2,33 +2,48 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Main Dashboard</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Abarrotes Cuevas</title>
+    <link rel="stylesheet" href="/CSS/CLI_MainDStyle.css">
+    <script src="/JS/CLI_MainDashboardScript.js"></script>
 </head>
 <body>
     <header>
-        <h1>Abarrotes Cuevas</h1>
-        <div class="header-buttons">
-            <button class="profile-button">Perfil</button>
-            <button class="logout-button">Cerrar Sesión</button>
-        </div>
+        <img src="/resourses/logo_cuevas.png" alt="Logo de la empresa" class="logo">
     </header>
     <div class="content">
         <div class="tab-control">
-            <button class="tab-button active" onclick="openTab(event, 'carrito')">Carrito</button>
-            <button class="tab-button" onclick="openTab(event, 'pedidos')">Pedidos Solicitados</button>
-            <button class="tab-button" onclick="openTab(event, 'catalogo')">Catálogo de Productos</button>
+            <button class="tab-button active" onclick="openTab(event, 'catalogo')">Catalogo de productos</button>
+            <button class="tab-button" onclick="openTab(event, 'carrito')">Carrito de compras</button>
+            <button class="tab-button" onclick="openTab(event, 'visualizar')">Visualizar Pedidos realizados</button>
         </div>
-        <div id="carrito" class="tab-content">
-            <h2>Contenido del Carrito</h2>
-        </div>
-        <div id="pedidos" class="tab-content">
-            <h2>Pedidos Solicitados</h2>
-        </div>
-        <div id="catalogo" class="tab-content">
+
+        <div id="catalogo" class="tab-content active">
             <h2>Catálogo de Productos</h2>
+            <br>
+            <div id="div_resultados" class="resultados">
+                <div class="tarjeta-contenedor"></div>
+            </div>
+            <br><br>
+            <div id="div_resultadosProductos" class="resultadosProductos">
+                <div class="tarjeta-contenedorProductos"></div>
+            </div>
+        </div>
+
+        <div id="carrito" class="tab-content">
+            <h2>lista del carrito de compras</h2>
+            <br>
+            <div id="div_resultadosProductosCarrito" class="resultadosProductosCarrito">
+                <div class="tarjeta-contenedorProductosCarrito"></div>
+            </div>
+        </div>
+
+        <div id="visualizar" class="tab-content">
+            <h2>Visualizar Pedidos realizados</h2>
+            <br>
+            <div id="div_resultadosProductoshistorial" class="resultadosProductosHistorial">
+                <div class="tarjeta-contenedorProductosCarrito"></div>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>

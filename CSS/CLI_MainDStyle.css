@@ -1,72 +1,135 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7e1e1;
-    background-repeat: no-repeat;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url("/resourses/FondoInicioSesion.jpg");
-    
+    background-color: #ffefd3;
 }
-.logo {
-    position: fixed;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30vw;
-}
-.contenido {
-    width: 90%;
-    max-width: 400px;
+
+header {
+    background-color:#9fd6d2;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 400px;
+    height: 200px;
+    margin-right: 10px;
 }
 
 h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-form {
-    margin-top: 20px;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-
-label {
-    display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 95%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    display: block;
+.tab-control {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
     width: 100%;
-    padding: 10px;
+}
+
+.tab-button {
+    padding: 10px 20px;
     font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
+    background-color: #f2f2f2;
     border: none;
-    border-radius: 3px;
+    border-bottom: 2px solid transparent;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.tab-button.active {
+    border-bottom-color: #007bff;
+    font-weight: bold;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.resultados {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: auto;
+    max-width: 100vw;
+    background-color:#d0ecea ;
+}
+.resultadosProductos {
+    display: flex;
+    overflow-y: auto;
+    max-width: 100%;
+    background-color: #d0ecea;
+}
+.resultadosProductosCarrito {
+    display: flex;
+    overflow-y: auto;
+    max-width: 100vw;
+    background-color: #d0ecea;
+}
+.resultadosProductosCarritoHistorial {
+    display: flex;
+    overflow-y: auto;
+    max-width: 100vw;
+    background-color: #d0ecea;
+}
+.tarjeta-contenedorProductos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjeta-contenedorProductosCarrito {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.tarjeta-contenedor {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.tarjetaCategory {
+    width: 30%;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #bec2c5;
+    margin: 10px;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.tarjetaCategory:hover {
+    background-color: #4ea0cfd3;
+}
+.tarjetaProduct{
+    width: 40%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: #bec2c5;
+    margin: 10px;
+    text-align: left;
+    transition-duration: 0.5s;
+}
+
+.tarjetaProduct:hover {
+    background-color: #4ea0cfd3;
 }

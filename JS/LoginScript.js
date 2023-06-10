@@ -6,6 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Agregar evento de clic al botón
     loginButton.addEventListener('click', function() {
         // Abrir una nueva ventana o pestaña
-        window.open('Ventanas/MainDashboard.html', '_blank');
+        window.open('CLI_MainDashboard.html', '_blank');
     });
 });
