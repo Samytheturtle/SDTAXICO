@@ -2,33 +2,40 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Main Dashboard</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Payment Method</title>
+    <link rel="stylesheet" href="../CSS/PaymentMethodstyle.css">
 </head>
 <body>
-    <header>
-        <h1>Abarrotes Cuevas</h1>
-        <div class="header-buttons">
-            <button class="profile-button">Perfil</button>
-            <button class="logout-button">Cerrar Sesión</button>
-        </div>
-    </header>
-    <div class="content">
-        <div class="tab-control">
-            <button class="tab-button active" onclick="openTab(event, 'carrito')">Carrito</button>
-            <button class="tab-button" onclick="openTab(event, 'pedidos')">Pedidos Solicitados</button>
-            <button class="tab-button" onclick="openTab(event, 'catalogo')">Catálogo de Productos</button>
-        </div>
-        <div id="carrito" class="tab-content">
-            <h2>Contenido del Carrito</h2>
-        </div>
-        <div id="pedidos" class="tab-content">
-            <h2>Pedidos Solicitados</h2>
-        </div>
-        <div id="catalogo" class="tab-content">
-            <h2>Catálogo de Productos</h2>
-        </div>
+    
+    <div class="paymentMethod">
+        <header>
+            <h1>Método de Pago</h1>
+        </header>
+        <form onsubmit="return paymentMethod(event)">
+            <label class="labelDebitCard"><input type="checkbox" id="debitCard" name="card" class="checkboxDebitCard" checked>Tarjeta de debito</label>
+            <label class="labelCreditCard"><input type="checkbox" id="creditCard" name="card"> Tarjeta de credito</label>
+            <br>
+            <br>
+            <label>Nombre del Titular</label>
+            <input type="text" id="textTarjet" required>
+            <br>
+            <br>
+            <label>Número de tarjeta</label>
+            <input type="text" id="textNumberTarjet" placeholder="0000 0000 0000 0000" maxlength="16" required>
+            <br>
+            <br>
+            <label>Fecha de caducidad</label>
+            <input type="number" placeholder="00" id="textMonthTarjet" maxlength="2" required>
+            <input type="number" placeholder="0000" id="textAnioTarjet" maxlength="4" required>
+            <br>
+            <br>
+            <label>CVV</label>
+            <input type="password" id="cvvCard" maxlength="4" required>
+            <br>
+            <br>
+            <button type="submit" id="buttonPaymentMethod">Agregar Metodo de Pago</button>
+        </form>
     </div>
-    <script src="script.js"></script>
+    <script src="../JS/PaymentMethodScript.js"></script>
 </body>
 </html>
