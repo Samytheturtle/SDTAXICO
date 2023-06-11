@@ -9,16 +9,15 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url("/resourses/FondoInicioSesion.jpg");
-    
+    background-image: url("/resourses/BackgrownLogin.jpg");
 }
+
 .logo {
-    position: fixed;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30vw;
+    width: 80%;
+    display: block;
+    margin: 0 auto;
 }
+
 .contenido {
     width: 90%;
     max-width: 400px;
@@ -27,8 +26,18 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
 }
-
+.Backgrountlogo{
+    position: fixed;
+    top: 10vh;
+    width: 90%;
+    max-width: 400px;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
 h1 {
     text-align: center;
 }
@@ -65,8 +74,18 @@ button {
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
     background-color: #0056b3;
+}
+
+#register-button {
+    background-color: #28a745;
+}
+
+#register-button:hover {
+    background-color: #218838;
 }

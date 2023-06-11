@@ -1,72 +1,77 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f7e1e1;
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
     margin: 0;
-    padding: 0;
-    background-image: url("/resourses/FondoInicioSesion.jpg");
-    
+    height: 100vh;
+    background-color: #ffefd3;
 }
-.logo {
-    position: fixed;
-    top: 5vh;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 30vw;
-}
-.contenido {
-    width: 90%;
-    max-width: 400px;
+  
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #9fd6d2;
 }
-
+  
+.header-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+  
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-right: 20px;
+}
+  
 h1 {
     text-align: center;
 }
-
-form {
+h2 {
+    text-align: center;
+}
+  
+.content {
+    width: 150%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #ffefd3 ;
+    border: 4px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
 }
-
-.form-group {
-    margin-bottom: 10px;
-}
-
+  
 label {
     display: block;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 95%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    display: block;
+    text-align: center;
     width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background-color: #007bff;
+}
+  
+input[type="text"],
+  input[type="date"],
+  input[type="tel"],
+  input[type="password"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+  
+button {
+    background-color: #8b7a5e;
+    color: white;
     border: none;
-    border-radius: 3px;
+    padding: 10px 20px;
+    margin: 10px;
     cursor: pointer;
+    transition-duration: 0.5s;
 }
 
-button:hover {
-    background-color: #0056b3;
+button:hover{
+    background-color: #ffefd3 ;
 }
+  

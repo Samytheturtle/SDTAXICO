@@ -1,11 +1,21 @@
-// Esperar a que el documento esté completamente cargado
-document.addEventListener('DOMContentLoaded', function() {
-    // Obtener referencia al botón de iniciar sesión
-    var loginButton = document.getElementById('login-button');
 
-    // Agregar evento de clic al botón
-    loginButton.addEventListener('click', function() {
-        // Abrir una nueva ventana o pestaña
-        window.open('CLI_MainDashboard.html', '_blank');
-    });
-});
+function loginbutton() {
+    
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+  
+    alert("Usuario: " + username + "\nContraseña: " + password);
+
+    window.location.href = 'CLI_MainDashBoard.html';
+}
+  
+  
+function registerButton() {
+    
+    alert("Redirigiendo a la página de registro...");
+    window.location.href = 'ClientRegister.html';
+}
+  
+//document.getElementById('login-button').addEventListener('click', loginbutton);
+//document.getElementById('register-button').addEventListener('click', registerButton);
+  
