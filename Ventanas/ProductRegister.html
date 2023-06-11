@@ -7,32 +7,37 @@
     <script src="../JS/ProductRegisterScript.js"></script>
 </head>
 <body>
-    <header>
-        <div class="header-info">
-            <img class="logo" src="../resourses/logo_cuevas.png" alt="Logo">
-            <div>
-                <h1>Registro de Cliente</h1>
-                <h2>Bienvenido/a</h2>
-            </div>
+  <header>
+    <div class="header-info"><img class="logo" src="../resourses/logo_cuevas.png" alt="Logo"></div>
+    <h1>Registro de Productos</h1>
+  </header>
+    <form>
+        <label for="codigo_barras">Código de Barras:</label>
+        <input type="number" id="codigo_barras" name="codigo_barras" required><br><br>
+
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br><br>
+
+        <label for="categoria">Categoría de Producto:</label>
+        <select id="categoria" name="categoria" required>
+        </select><br><br>
+
+        <label for="precio_venta">Precio de Venta:</label>
+        <input type="number" id="precio_venta" name="precio_venta" required><br><br>
+
+        <label for="fecha_caducidad">Fecha de Caducidad:</label>
+        <input type="date" id="fecha_caducidad" name="fecha_caducidad" required><br><br>
+
+        <h3>Inventario por Sucursal:</h3>
+        
+        <div id="div_resultados" class="resultados">
+          <div class="tarjeta-contenedor"></div>
         </div>
-    </header>
-    <div class="content">
-        <label for="fullName">Nombre completo:</label>
-        <input type="text" id="fullName" required><br><br>
-        
-        <label for="birthdate">Fecha de nacimiento:</label>
-        <input type="date" id="birthdate" required><br><br>
-        
-        <label for="phoneNumber">Número de teléfono:</label>
-        <input type="tel" id="phoneNumber" inputmode="numeric" maxlength="10" required><br><br>
-        
-        <label for="password">Contraseña:</label>
-        <input type="password" id="password" required><br><br>
-        
-        <label for="confirmPassword">Confirmar contraseña:</label>
-        <input type="password" id="confirmPassword" required><br><br>
-    </div>
-    <button onclick="registerUser()">Registrar Usuario</button>
-    <button onclick="cancelRegister()">Cancelar</button>
+        <input type="submit" value="Registrar Producto" onclick="registerProduct()">
+        <input type="button" value="Cancelar" onclick="cancelRegister()">
+    </form>
 </body>
 </html>
