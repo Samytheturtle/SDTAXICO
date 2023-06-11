@@ -2,33 +2,37 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Main Dashboard</title>
-    <link rel="stylesheet" href="/CSS/style.css">
+    <title>Registro de productos</title>
+    <link rel="stylesheet" href="../CSS/ProductRGStyle.css">
+    <script src="../JS/ProductRegisterScript.js"></script>
 </head>
 <body>
     <header>
-        <h1>Abarrotes Cuevas</h1>
-        <div class="header-buttons">
-            <button class="profile-button">Perfil</button>
-            <button class="logout-button">Cerrar Sesión</button>
+        <div class="header-info">
+            <img class="logo" src="../resourses/logo_cuevas.png" alt="Logo">
+            <div>
+                <h1>Registro de Cliente</h1>
+                <h2>Bienvenido/a</h2>
+            </div>
         </div>
     </header>
     <div class="content">
-        <div class="tab-control">
-            <button class="tab-button active" onclick="openTab(event, 'carrito')">Carrito</button>
-            <button class="tab-button" onclick="openTab(event, 'pedidos')">Pedidos Solicitados</button>
-            <button class="tab-button" onclick="openTab(event, 'catalogo')">Catálogo de Productos</button>
-        </div>
-        <div id="carrito" class="tab-content">
-            <h2>Contenido del Carrito</h2>
-        </div>
-        <div id="pedidos" class="tab-content">
-            <h2>Pedidos Solicitados</h2>
-        </div>
-        <div id="catalogo" class="tab-content">
-            <h2>Catálogo de Productos</h2>
-        </div>
+        <label for="fullName">Nombre completo:</label>
+        <input type="text" id="fullName" required><br><br>
+        
+        <label for="birthdate">Fecha de nacimiento:</label>
+        <input type="date" id="birthdate" required><br><br>
+        
+        <label for="phoneNumber">Número de teléfono:</label>
+        <input type="tel" id="phoneNumber" inputmode="numeric" maxlength="10" required><br><br>
+        
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required><br><br>
+        
+        <label for="confirmPassword">Confirmar contraseña:</label>
+        <input type="password" id="confirmPassword" required><br><br>
     </div>
-    <script src="script.js"></script>
+    <button onclick="registerUser()">Registrar Usuario</button>
+    <button onclick="cancelRegister()">Cancelar</button>
 </body>
 </html>

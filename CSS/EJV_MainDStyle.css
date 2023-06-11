@@ -9,7 +9,7 @@ body {
     height: 100vh;
     margin: 0;
     padding: 0;
-    background-image: url("/resourses/FondoInicioSesion.jpg");
+    background-image: url("../resourses/FondoInicioSesion.jpg");
     
 }
 .logo {
