@@ -2,33 +2,27 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Main Dashboard</title>
-    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Abarrotes Cuevas</title>
+    <link rel="stylesheet" href="/CSS/RPD_MainDStyle.css">
+    <script src="/JS/RPD_MainDashboardScript.js"></script>
 </head>
 <body>
     <header>
-        <h1>Abarrotes Cuevas</h1>
+        <img src="/resourses/logo_cuevas.png" alt="Logo de la empresa" class="logo">
         <div class="header-buttons">
-            <button class="profile-button">Perfil</button>
-            <button class="logout-button">Cerrar Sesión</button>
+            <div class="header-info">
+                <label id="user-label"></label>
+            </div>
         </div>
     </header>
     <div class="content">
-        <div class="tab-control">
-            <button class="tab-button active" onclick="openTab(event, 'carrito')">Carrito</button>
-            <button class="tab-button" onclick="openTab(event, 'pedidos')">Pedidos Solicitados</button>
-            <button class="tab-button" onclick="openTab(event, 'catalogo')">Catálogo de Productos</button>
-        </div>
-        <div id="carrito" class="tab-content">
-            <h2>Contenido del Carrito</h2>
-        </div>
         <div id="pedidos" class="tab-content">
-            <h2>Pedidos Solicitados</h2>
-        </div>
-        <div id="catalogo" class="tab-content">
-            <h2>Catálogo de Productos</h2>
+            <h2>Pedidos Asignados</h2>
+            <br>
+            <div id="div_resultados" class="resultados">
+                <div class="tarjeta-contenedor"></div>
+            </div>
         </div>
     </div>
-    <script src="script.js"></script>
 </body>
 </html>
